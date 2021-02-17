@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Representaciones Guerra S.A.C</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <header class="sombra">
+        <div class="barra-navegacion contenedor">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="Logo">
+                <h3>Representaciones Guerra S.A.C</h3>
+            </div>
+            <div class="links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contactanos</a>
+            </div>
+            <div class="hamburguesa">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="contacto">
+        <div class="imagen-contacto">
+            <div class="contenido-contacto contenedor1">
+                <h3 class="cwhite">Ponte en contacto con nosotros</h3>
+                <p class="cwhite">Llena el formulario y recibe las mejores propuestas de seguridad!</p>
+                <a class="boton-hollow cwhite" href="#contacto">Contactanos</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="contacto seccion-nosotros contenedor1">
+        <h3>Representaciones Guerra S.A.C</h3>
+        <div id="mapa" class="mapa"></div>
+    </div>
+
+    <div class="formulario-contacto contenedor1" id="contacto">
+        <form class="col s12">
+            <legend>Nos gustaría saber de ti!</legend>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Nombre Completo</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Asunto</label>
+                </div>
+            </div>
+            <input type="submit" class="boton-hollow" value="Enviar">
+        </form>
+    </div>
+
+    <footer>
+        <div class="contenido-footer container">
+            <div class="acerca-nosotros">
+                <h4>Sobre Nosotros</h4>
+                <p>Somos una empresa que brindara seguridad a tu hogar y también tu empresa mediante estos productos:
+                    Cámaras, Videoporteros, Intercomunicadores, Sistemas de incendio, Alarmas , Entre otros.</p>
+            </div>
+            <div class="info-referencia">
+                <h4>Contacto</h4>
+                <p>Telf. 01 4268631 / Entel. 998 264 982</p>
+                <p>E-mail: repre_guerra@hotmail.com</p>
+                <p>ventaguerra@hotmail.com</p>
+                <p>Dirección: Jr. Pachitea 373 Cercado de Lima</p>
+            </div>
+            <div class="redes-sociales">
+                <h4>Redes Sociales</h4>
+                <a href="https://www.facebook.com/repreguerra.pe/" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <span>Todos los derechos reservados &copy;</span>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

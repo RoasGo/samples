@@ -1,0 +1,305 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    font-weight: 300;
+    overflow: hidden;
+}
+
+html {
+    overflow: hidden;
+}
+
+.portafolio {
+    color: #ffffff;
+    background: radial-gradient(rgba(43, 55, 96, 1), rgba(11, 16, 35, 1));
+}
+
+nav {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 300;
+    z-index: 2;
+}
+
+.menu {
+    cursor: pointer;
+    z-index: 2;
+}
+
+.nav-open {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 35vh;
+    background-color: #ffffff;
+    z-index: 1;
+    color: #000000;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+.nav-open h3 {
+    font-size: 28px;
+    padding: 0 0 40px 0;
+    font-weight: 400;
+}
+
+.nav-open p {
+    font-size: 18px;
+}
+
+.contact {
+    grid-column: 2/3;
+    justify-self: center;
+}
+
+.social {
+    grid-column: 3/4;
+    justify-self: center;
+}
+
+.social-links img {
+    padding: 0px 20px;
+}
+
+.page {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.barbero,
+.chef {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.details {
+    grid-column: 2/3;
+    align-self: end;
+}
+
+.details h1 {
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.details h2 {
+    font-size: 42px;
+    padding: 20px 0;
+    font-weight: 300;
+}
+
+.details p {
+    font-size: 24px;
+    padding: 20px 0 50px 0;
+}
+
+.hero {
+    overflow: hidden;
+    height: 500px;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+}
+
+.hero a {
+    display: flex;
+}
+
+.hero img {
+    height: 500px;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+}
+
+.model-left {
+    transform: translate(0%, -10%);
+}
+
+.model-right {
+    transform: translate(0%, 10%);
+}
+
+.hero:hover .model-left {
+    transform: translate(0%, 0%);
+}
+
+.hero:hover .model-right {
+    transform: translate(0%, 0%);
+}
+
+.puntos {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.puntos>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.puntos h3 {
+    font-size: 24px;
+    font-weight: 300;
+    padding: 30px;
+}
+
+.puntos svg {
+    cursor: pointer;
+    transform: scale(2);
+    opacity: 0.5;
+}
+
+.puntos svg:hover {
+    animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes dot {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(4);
+    }
+}
+
+.puntos svg.active {
+    opacity: 1;
+}
+
+
+/*ANODA PEICH*/
+
+.banner {
+    height: 50vh;
+    width: 100vw;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.autor {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+.autor h1 {
+    font-size: 42px;
+}
+
+.autor h2 {
+    padding: 10px 0;
+    font-size: 32px;
+}
+
+.story,
+.my-work {
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.story-descripcion,
+.work-descripcion {
+    flex-basis: 50%;
+}
+
+.story-descripcion h3,
+.work-descripcion h3 {
+    font-size: 36px;
+    padding-bottom: 30px;
+}
+
+.story-descripcion p,
+.work-descripcion p {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.work-gallery img {
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .page {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: 2fr 1fr;
+        align-items: center;
+    }
+    .hero {
+        grid-column: 2/3;
+        height: auto;
+    }
+    .hero img {
+        height: 400px;
+    }
+    .details {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    .details h1 {
+        font-size: 48px;
+    }
+    .details h3 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero img {
+        height: 300px;
+    }
+    .details h1 {
+        font-size: 38px;
+    }
+    .details h3 {
+        font-size: 28px;
+    }
+}
